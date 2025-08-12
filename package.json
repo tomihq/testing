@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest --globals"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Tomás Hernández",
+  "license": "ISC",
+  "dependencies": {
+    "vitest": "^3.2.4"
+  }
 }
