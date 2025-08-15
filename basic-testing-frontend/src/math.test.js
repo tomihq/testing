@@ -22,7 +22,14 @@ it('should summarize all number values in an array', () => {
 
 
 it('should yield NaN if a least one invalid number is provided', () =>{
-    const arr = [1, undefined];
+    const arr = [1, undefined, 'invalid'];
     const result = add(arr);
     expect(result).toBeNaN()
+})
+
+it('should yield a correct sum if an array of numeric string values is provided', () =>{
+    const numbers = ['1', '2'];
+    const result = add(numbers);
+    const expectedResult = numbers.reduce((pred, cur) => +pred + +cur, 0);
+    expect(result).toBe(expectedResult)
 })
