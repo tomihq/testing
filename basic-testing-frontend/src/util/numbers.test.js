@@ -1,6 +1,12 @@
 import { it, expect } from "vitest";
 import { transformToNumber } from './numbers'
 
+it('should convert a string number to number of type number', () =>{
+    const sr = "1";
+    const result = transformToNumber(sr);
+    expect(result).toBeTypeOf('number');
+})
+
 it('should convert a string to number', () =>{
     const sr = "1";
     const expectedResult = 1; 
