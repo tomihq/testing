@@ -1,4 +1,4 @@
-import { validateInput } from "./validation.js";
+import { validateStringNotEmpty, validateNumber  } from "./validation.js";
 
 export function transformToNumber(value) {
   return +value;
@@ -7,8 +7,10 @@ export function transformToNumber(value) {
 export function cleanNumbers(numbersValues){
   const numbers = [];
    for (const numberInput of numbersValues) {
-        validateInput(numberInput)
-        numbers.push(numberInput);
+        validateStringNotEmpty(numberInput);
+        const number = transformToNumber(numberInput);
+        validateNumber(number);
+        numbers.push(number);
       }
   return numbers;
 }
