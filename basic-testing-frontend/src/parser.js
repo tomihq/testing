@@ -1,3 +1,9 @@
+export function extractEnteredNumberValues(form){
+  const formData = new FormData(form);
+
+  return extractNumbers(formData);
+}
+
 export function extractNumbers(formData) {
   const num1Input = formData.get('num1');
   const num2Input = formData.get('num2');
