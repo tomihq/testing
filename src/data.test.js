@@ -9,4 +9,3 @@ describe('generateReportData()', () =>{
         expect(logger).toHaveBeenCalled();
     })
 })
-
